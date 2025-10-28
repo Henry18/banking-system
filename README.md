@@ -53,6 +53,8 @@ cd banking-system
 ### Construir y levantar contenedores
 
 ```bash
+mvn -f services/personas-clientes/pom.xml clean package -DskipTests
+mvn -f services/cuentas-movimientos/pom.xml clean package -DskipTests
 docker compose -f services/docker/docker-compose.yml up --build -d
 ```
 
