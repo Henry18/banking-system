@@ -1,8 +1,10 @@
 # Banking System - Microservicios (Personas/Clientes y Cuentas/Movimientos)
 
 ## Descripción
+
 Proyecto de arquitectura basada en microservicios que implementa un sistema bancario simplificado.
 Incluye dos microservicios:
+
 1. **Personas-Clientes** → gestiona información personal y de clientes.
 2. **Cuentas-Movimientos** → administra cuentas bancarias, operaciones y reportes financieros.
 
@@ -29,6 +31,7 @@ Incluye dos microservicios:
 ---
 
 ## Tecnologías
+
 - Java 17 + Spring Boot 3.3.4
 - PostgreSQL 15
 - Docker / Docker Compose
@@ -41,12 +44,14 @@ Incluye dos microservicios:
 ## Ejecución del proyecto
 
 ### Clonar el repositorio
+
 ```bash
-git clone https://github.com/tuusuario/banking-system.git
+git clone https://github.com/Henry18/banking-system.git
 cd banking-system
 ```
 
 ### Construir y levantar contenedores
+
 ```bash
 docker compose -f services/docker/docker-compose.yml up --build -d
 ```
@@ -61,8 +66,11 @@ Esto levantará:
 | postgres-personas | 5433 | Base de datos personas |
 | postgres-cuentas | 5434 | Base de datos cuentas |
 ```
+
 ### Verificación
+
 Swagger disponible en:
+
 - [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 - [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html)
 
@@ -71,12 +79,15 @@ Swagger disponible en:
 ## Pruebas
 
 ### Unitarias
+
 ```bash
 mvn test
 ```
 
 ### Integración
+
 Ejemplo de test de integración (`ReporteEstadoCuentaIntegrationTest`):
+
 - Valida el flujo completo: creación de movimientos → consolidación → generación de reporte de estado de cuenta.
 
 ---
@@ -85,11 +96,11 @@ Ejemplo de test de integración (`ReporteEstadoCuentaIntegrationTest`):
 
 - Archivo: `banking-system.postman_collection.json`
 - Incluye ejemplos de:
-    - `POST /clientes`
-    - `GET /clientes/{id}`
-    - `POST /cuentas`
-    - `POST /movimientos`
-    - `GET /reportes/estado-cuenta?clienteId=...`
+  - `POST /clientes`
+  - `GET /clientes/{id}`
+  - `POST /cuentas`
+  - `POST /movimientos`
+  - `GET /reportes/estado-cuenta?clienteId=...`
 
 Importar en Postman → “Import” → seleccionar archivo JSON.
 
@@ -153,6 +164,7 @@ services:
 ---
 
 ## Autor
+
 **Henry Martínez**  
 Desarrollador Senior Fullstack  
 [GitHub](https://github.com/henry-martinez) | [LinkedIn](https://linkedin.com/in/henry-martinez)
